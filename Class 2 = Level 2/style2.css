@@ -1,0 +1,24 @@
+.animals{
+    height: auto;
+    width:789px;
+    display: flex;
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:50px;
+}
+img{
+    margin-top: 50px;
+}
+img:hover{
+    border-radius: 10px;
+    scale:1.1;
+    transition:2s;
+}
+body{
+    display:flex;
+    flex-direction: column;
+     justify-content: center;
+    align-items:center; 
+
+}
