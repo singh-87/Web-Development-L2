@@ -1,0 +1,103 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    position: fixed;
+    width:100%;
+    background-color: #ffffff;
+    top: 0px;
+    padding: 10px;
+    z-index:2;
+}
+ul{
+    display:flex;
+    justify-content: space-between;
+    margin-right:50px;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    margin-left:75px;
+}
+li:hover{
+    border-bottom:  2px solid red ;
+}
+.img1{
+    height:200px;
+}
+.h21{
+    font-family: Oleo Script;
+    background: linear-gradient(green, red, yellow );
+    background-clip: text;
+    color: transparent;
+    font-size:25px;
+    text-shadow: 2px 2px 2px green;
+}
+#hero{
+    background-image: url("ocean.jpg");
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+}
+.hero-content{
+    width:900px;
+    background-color: black;
+    opacity:0.8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 400px;
+    padding:20px;
+    border-radius: 10px;
+}
+#h11{
+    color:white;
+    font-family: raleway;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px grey;
+}
+.hero-content p{
+    font-size: 24px;
+    font-family: Quicksand;
+    color:ghostwhite;
+    text-align: center;
+}
+.hero-content a{
+    text-decoration: none;
+    font-size: 24px;
+    background-color:purple;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+#hero,#highlights{
+    z-index:-2;
+}
+#highlights img {
+    height:250px;
+    margin-right:0px;
+    width:80%;
+}
+#highlights p{
+    text-align: center;
+}
+#highlights h2{
+    text-align: center;
+}
+footer img {
+    height: 50px;
+    width:50px;
+    padding: 10px;
+}
+footer{
+    background-color:black;
+    text-align: center;
+}
