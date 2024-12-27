@@ -1,0 +1,38 @@
+#sec1 {
+    background: linear-gradient(#fa586d,#bc7095,#848bb7,#659bca);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
+  }
+  
+  @keyframes sec1 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  #p1{
+    margin-left:250px;
+  }
+footer{
+    background: linear-gradient(300deg,#fc526c,#c56b8e,#9781a8,#7890bc,#48a8da);
+    background-size: 300% 300%;
+    animation: gradient-animation 30s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+ 
