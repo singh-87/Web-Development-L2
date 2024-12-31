@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="b1">
+    <h1>Introduction to Javascript</h1>
+    <h2 id="id1"></h2>
+    <br>
+    <h2>Addition</h2>
+    \<h3 id="add"></h3>
+    <hr>
+    <h2>Subtraction</h2>
+    <h3 id="sub"></h3>
+    <hr>
+    <h2>Multiplication</h2>
+    <h3 id="mul"></h3>
+    <hr>
+    
+
+
+
+
+    <script>
+        let h2_id1=document.getElementById("id1");
+        let body_1=document.getElementById("b1");
+        h2_id1.innerHTML="DYNAMIC HEADING CREATED";
+        h2_id1.style.color='red'
+        body_1.style.backgroundColor="cyan";
+        let add_1=document.getElementById("add");
+        let a=50;
+        let b=100;
+        let add=a+b;
+        add_1.innerHTML= `${a}+${b}=${add}`;
+        let sub_1=document.getElementById('sub');
+        let c =Number(prompt("Enter your first number:"));
+        let d= Number(prompt("Enter your second number:"));
+        let sub=c-d;
+        sub_1.innerHTML=`${c}-${d}=${sub}`;
+        let mul_1=document.getElementById('mul');
+        let saajan= Number(prompt("Enter your first number:"));
+        let rahul= Number(prompt("Enter your second number:"));
+        mul = saajan*rahul;
+        mul_1=`${saajan}x${rahul}=${mul}`;
+        document.write(`<h2>${mul_1}</h2>`);
+        document.write("<hr>");
+        document.write("<h2>Division</h2>");
+        document.write("<h3 id='div1'></h3>");
+        let div = saajan/rahul;
+        document.write(`<h3>${saajan}/${rahul}=${div}</h3>`)
+        
+        
+    </script>
+</body>
+</html>
