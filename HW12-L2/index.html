@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <marquee><h1 class="changing-color">Mathematical operations</h1></marquee>
+    <hr>
+    <h2>Addition Of Numbers</h2>
+    <h3 id="add"></h3>
+    <hr>
+    <h2>Subtraction of Numbers</h2>
+    <h3 id="sub"></h3>
+    <hr>
+    <h2>Multiplication of Numbers</h2>
+    <h3 id="mul"></h3>
+    <hr>
+    <h2>Division of Numbers</h2>
+    <h3 id="div"></h3>
+
+
+
+
+
+
+    <script>
+        let body_1=document.getElementById("body");
+        body_1.style.backgroundColor='cyan';
+        let add_1=document.getElementById("add");
+        let a = Number(prompt("Enter your first number for addition:"));
+        let b = Number(prompt("Enter your second number for addition:"));
+        let add = a+b;
+        add_1.innerHTML=(`${a}+${b}= ${add}`);
+        add_1.style.color='red';
+        let sub_1=document.getElementById("sub");
+        let c=Number(prompt("Enter your first number for subtraction:"));
+        let d = Number(prompt("Enter your second number for subtraction:"));
+        let sub = c-d;
+        sub_1.innerHTML=(`${c}-${d}= ${sub}`);
+        sub_1.style.color='blue';
+        let mul_1=document.getElementById("mul");
+        let saajan = Number(prompt("Enter your first number for multiplication:"));
+        let dave = Number(prompt("Enter your second number for multiplication:"));
+        let mul = saajan*dave;
+        mul_1.innerHTML=(`${saajan} x ${dave} = ${mul}`);
+        mul_1.style.color='white'
+        let div_1 = document.getElementById("div");
+        let acer = Number(prompt("Enter your first number for division:"));
+        let apple = Number(prompt("Enter your second number for division:"));
+        let div = acer/apple;
+        div_1.innerHTML = (`${acer}/${apple} = ${div}`);
+        div_1.style.color='grey'
+    </script>
+</body>
+</html>
