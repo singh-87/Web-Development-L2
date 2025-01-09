@@ -1,0 +1,22 @@
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+    width:400px;
+    padding:10px;
+    background-color: aqua;
+    text-shadow: 2px 2px 2px red;
+}
+form{
+    background-color: aqua;
+    width:500px;
+    margin-top:200px;
+}
+body{
+    background-color: pink;
+}
+label,input{
+    font-size:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}

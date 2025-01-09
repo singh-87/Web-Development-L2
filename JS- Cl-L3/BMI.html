@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <center>
+        <hr>
+        <h3 id="bmi_1"></h3>
+        <hr>
+        <form>
+        <fieldset>
+            <legend><h2>BMI GENERATOR</h2></legend>
+            <label>Name</label>
+            <input type="text" id="name"><br>
+            <label>Weight</label>
+            <input type="text" id="weight"><br>
+            <label>Height</label>
+            <input type="text" id="height">
+            <br>
+            <button type="button" style="font-size:20px;" onclick="bmi()">SUBMIT</button>
+        </fieldset>
+    </form>
+    </center>
+    <script>
+        let name=document.getElementById("name");
+        let weight=document.getElementById('weight');
+        let height=document.getElementById('height');
+        let bmi_1=document.getElementById('bmi_1');
+        function bmi(){
+            let result=Number(weight.value)/Number(height.value)**2;
+            bmi_1.innerHTML=` Hi ${name.value}, Your BMI is ${result}`;
+            alert(` Hi ${name.value}, Your BMI is ${result}`);
+        }
+    </script>
+    
+</body>
+</html>

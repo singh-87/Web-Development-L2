@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <center>
+        <hr>
+        <h3 id="brand_name1"></h3>
+        <hr>
+        <form>
+        <fieldset>
+            <legend><h2>Brand Name Generator</h2></legend>
+            <label>Name</label>
+            <input type="text" id="name"><br>
+            <label>Place</label>
+            <input type="text" id="place"><br>
+            <br>
+            <button type="button" style="font-size:20px;" onclick="brand()">SUBMIT</button>
+        </fieldset>
+    </form>
+    </center>
+    <script>
+            let name=document.getElementById("name");
+            let place=document.getElementById('place');
+            let brand_name1=document.getElementById("brand_name1");
+            function brand(){
+            let brand_name2=name.value+" "+place.value;
+            brand_name1.innerHTML=`Your Brand Name is ${brand_name2}`;
+            alert(`Your Brand Name is ${brand_name2}`);
+        }
+    </script>
+    
+</body>
+</html>
