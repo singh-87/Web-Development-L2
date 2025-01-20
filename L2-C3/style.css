@@ -56,3 +56,8 @@ header{
 footer{
     background-color:gray;
 }
+svg{
+    position: relative;
+    margin-top: 50px;
+    
+}
