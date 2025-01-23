@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h2>Case Conversion</h2>
+    
+    <script>
+        let a = prompt("Enter your word:");
+        document.write(`Your conversion is ${a.toUpperCase()}`);
+        document.write(`<br>`);
+        document.write(`Your new word is :${a[0].toUpperCase()+a.slice(1,a.length).toLowerCase()}`);
+        document.write(`<hr>`);
+        document.write(`<h2>Counting characters </h2>`);
+        let b = prompt("Enter the word you want to find the length of:");
+        document.write(`The total length of your word is: ${b.length}`);
+        document.write(`<hr>`);
+        let string ='Saajan';
+        document.write(`${string}`);
+        document.write(`<br>`);
+        document.write(`The length of this is ${string.length}`);
+        document.write(`<br>`);
+        document.write(`After slicing, it is: "${string.slice(0, 4)}"`);
+        document.write(`<br>`);
+        document.write(`The length after trimming is: ${string.trim().length}`);
+        document.write(`<br>`);
+       
+    for (let i = 100; i <= 150; i++) {
+    document.write(i + "<br>");
+    }
+    document.write(`<hr>`);
+
+    for (let i = 250; i >= 200; i--) {
+    document.write(i + "<br>");
+    }
+
+
+
+    </script>
+</body>
+</html>
