@@ -1,0 +1,22 @@
+#display{
+    font-size: 80px;
+    background: linear-gradient(cyan,navy);
+    background-clip: text;
+    color:transparent;
+    border:3px solid yellow;
+    box-shadow: 3px 3px 3px purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+}
+#jumbo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:120px;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 1rem; /* Space between images */
+}
