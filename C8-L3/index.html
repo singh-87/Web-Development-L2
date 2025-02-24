@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: linear-gradient(navy,cyan);color: white;font-size:20px;">
+    <h1 style="color:red;text-align: center;">DICE CHALLENGE</h1>
+    <div class="container">
+        <div class="box">
+            <h3>Player</h3>
+            <img src="dice1.png" alt="dice" id="p1">
+            <h3 id="result_1">Score:0</h3>
+        </div>
+        <div style="text-align: center;">
+            <button type="button" style="height:150px;width:150px;background-color: purple;border-radius: 5px;font-size:25px; color:white;" onclick="dice()" id="btn_1">ROLL-LOL</button>
+            <button type="button" id='reset' onclick="over()">RESET</button>
+            <h2 id="points" style="text-shadow: 2px 2px 2px yellow; font-weight: bold;">FIRST TO SCORE 3 POINTS WINS</h2>
+        </div>
+        <div class="box">
+            <h3>Computer</h3>
+            <img src="dice1.png" alt="dice" id="c1">
+            <h3 id="result_2">Score:0</h3>
+        </div>
+    </div>
+
+    <script>
+        let player_1 = document.getElementById("p1");
+        let computer_1 = document.getElementById("c1");
+        let player_score = 0;
+        let computer_score = 0;
+        let result_1 = document.getElementById('result_1');
+        let result_2 = document.getElementById('result_2');
+        let btn_1 = document.getElementById('btn_1');
+        let reset = document.getElementById('reset');
+        function dice(){
+            let computer = Math.ceil(Math.random()*6);
+            let computer_image=`dice${computer}.png`;
+            computer_1.src=computer_image;
+            let player = Math.ceil(Math.random()*6);
+            let player_image=`dice${player}.png`;
+            player_1.src=player_image;
+            if (player>computer){
+                player_score+=1;
+            }
+            else if (computer>player){
+                computer_score+=1;
+            }
+            else{
+                player_score+=0;
+                computer_score+=0;
+            }
+            result_1.innerHTML=`Score:${player_score}`;
+            result_2.innerHTML=`Score:${computer_score}`;
+            if (player_score==3){
+                btn_1.disabled=true;
+                alert('Player Wins This Game');
+
+            }
+            else if (computer_score==3){
+                btn_1.disabled=true;
+                alert("Computer Wins This Game");
+            }
+        }
+        function over(){
+            btn_1.disabled = false;
+            computer_score = 0;
+            player_score = 0;
+
+
+            result_1.innerHTML=`Score:${player_score}`;
+            result_2.innerHTML=`Score:${computer_score}`;
+        }
+    </script>
+</body>
+</html>
