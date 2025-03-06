@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Soup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <form>
+                <div class="col-3">
+                    <input type="text">
+                </div>
+                <div class="col-3">
+                    <button type="button" onclick="addValue('+')">+</button>
+                    <button type="button"  onclick="addValue('7')">7</button>
+                    <button type="button"  onclick="addValue('8')">8</button>
+                    <button type="button" onclick="addValue('9')">9</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" onclick="addValue('-')">-</button>
+                    <button type="button" onclick="addValue('4')">4</button>
+                    <button type="button" onclick="addValue('5')">5</button>
+                    <button type="button" onclick="addValue('6')">6</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" onclick="addValue('*')">*</button>
+                    <button type="button" onclick="addValue('1')">1</button>
+                    <button type="button" onclick="addValue('2')">2</button>
+                    <button type="button" onclick="addValue('3')">3</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" onclick="addValue('/')">/</button>
+                    <button type="button" onclick="addValue('0')">0</button>
+                    <button type="button" onclick="addValue('.')">.</button>
+                    <button type="button" onclick="result()">=</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" onclick="clear_input()" style="background-color: black; width:90%; font-size:25px;color:white;border-radius:10px;">Reset</button>
+                </div>
+
+
+            </form>
+    </div>
+    <script>
+        function addValue(a){
+            let input = document.querySelector('input');
+            input.value+=a;
+        }
+        function result(){
+            let input = document.querySelector('input');
+            let result_1 = eval(input.value);
+            input.value=result_1;
+        }
+        function clear_input(){
+            let input = document.querySelector('input');
+            input.value=" ";
+        }
+         
+    </script>
+</body>
+</html>

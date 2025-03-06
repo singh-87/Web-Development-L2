@@ -1,0 +1,49 @@
+form{
+    display:flex;
+    flex-direction: column;
+    width:25vw;
+    height:30vw;
+    padding: 20px;
+    background-color:ghostwhite;
+    margin:70px;
+    border-radius:20px;
+    justify-content:center;
+    position:fixed;
+    top:45px;
+}
+input{
+    font-size: 30px;
+    width:90%;
+    box-shadow:2px 2px 2px orange;
+    text-align: right;
+}
+button{
+    margin: 10px;
+    font-size: 25px;
+    text-align:center;
+    background-color: black;
+    box-shadow:2px 2px 2px green;
+    border: none;
+    color:white;
+    font-weight: bold;
+    border-radius:100%;
+    width:50px;
+    height:50px;
+    box-sizing: border-box;
+}
+.col-3{
+    text-align:center;
+}
+body{
+    background:linear-gradient(orange,navy,cyan);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position:fixed;
+    height:100%;
+    width:100%;
+}
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
