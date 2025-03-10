@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button type="button">Adding Data</button>
+    <div class="c1">
+        
+    </div>
+    <h2></h2>
+    <form>
+        <input type="text" id="inputBox">
+        <button type="button">Insert</button>
+    </form>
+    <h3 id="result_2"></h3>
+<script>
+    let btn_2 = document.querySelectorAll('button')[1];
+    let inputBox = document.getElementById('inputBox');
+    let result_2 = document.getElementById('result_2');
+    let insert_data = ()=>{
+        let data  = inputBox.value;
+        result_2.textContent=data;
+    }
+    btn_2.addEventListener('click',insert_data);
+//     let btn_1 = document.querySelector('button');
+//     function select(){
+//         let div_1 = document.querySelector(".c1");
+//         let h1 = document.createElement("h1");
+//         h1.textContent="Today is Sunny";
+//         div_1.appendChild(h1);
+//     }
+//     btn_1.addEventListener("click",select);
+//     let h2 = document.querySelector('h2');
+//     let square = (a)=>{
+//         b = a**2;
+//         let result = `${a}<sup>2</sup>=${b}`;
+//         h2.innerHTML=result;
+//     }
+// square(5);
+
+
+
+
+</script>
+</body>
+</html>
