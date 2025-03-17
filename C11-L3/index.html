@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div class="container1">
+            <table border="2">
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td><input type="text" id="age"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <select style="width:100%;font-size: 20px;" id="gender">
+                            <option value="">Select!</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                </td>
+                </tr>
+                <tr>
+                    <th>Course</th>
+                    <td><input type="text" id="course"></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="button" style="background-color:yellow;width:100%;font-size: 20px;" onclick="to_Save()">SAVE</button></th>
+                </tr>
+                
+            </table>
+        </div>
+    </center>
+    <center>
+        <div class="container2">
+            <table border="2" style="width:70%;margin-top: 30px;">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </div>
+    </center>
+    <script>
+        let name = document.querySelectorAll("input")[0];
+        let age = document.querySelectorAll("input")[1];
+        let gender = document.getElementById('gender');
+        let course = document.querySelectorAll("input")[2];
+        let tb2 = document.querySelectorAll('table')[1];
+        function to_Save(){
+            if (name.value=='' || age.value=='' || gender.value=='' || course.value==''){
+                alert("Please fill in the required fields");
+            }
+            else{
+                let tr = document.createElement("tr");
+                tr.innerHTML=`<td>${name.value}</td>
+                            <td>${age.value}</td>
+                            <td>${gender.value}</td>
+                            <td>${course.value}</td>
+                            <td><button type='button' style='background-color:red;font-size:25px;color:white;' onclick='to_remove(event)'>Delete</button></td>`
+                tb2.appendChild(tr);
+            }
+
+
+        }
+        function to_remove(event){
+            event.target.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.container1{
+    margin-top: 50px;
+}
+table{
+    width:50%;
+}
+input{
+    width:100%;
+    font-size:25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+td{
+    padding:10px;
+}
+body{
+    background: linear-gradient(to right, navy,cyan,orange);
+    height: 100%;
+}
