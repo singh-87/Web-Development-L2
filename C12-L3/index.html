@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Javascript Functions**</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li>For each</li>
+        <li>Filter</li>
+        <li>Map</li>
+        <li>Splice</li>
+        <li>Json.stringify</li>
+    </ul>
+    <h1>Button Pressed</h1>
+    <button type="button">Button 1 </button>
+    <button type="button">Button 2</button>
+    <button type="button">Button 3</button>
+    <br><br>
+    <script>
+    //     let name = ['saajan','faizal','ramesh'];
+    //     let empty = []
+    //     name.forEach((item,index,array) => {
+    //         name[index]=item.toUpperCase();
+    //         empty.push([index]=item[0]);
+    //     });
+    //     document.write(JSON.stringify(name));
+    //     document.write("<br><br>");
+    //     document.write(JSON.stringify(empty));
+    //     document.write("<br>");
+    //     let buttons = document.querySelectorAll('button');
+    //     buttons.forEach((item,index)=>{
+    //         buttons[index].addEventListener('click',btn_press)
+    //         function btn_press(){
+    //             alert(`You've pressed button ${index+1}`);
+    //         }
+    // })
+    let hobby = ['football','badminton','Sepak Takraw'];
+    let game = hobby.filter((item,index)=>{
+                    return item[0]=="S";
+    }
+
+)
+        document.write(game);
+        document.write('<br>');
+    // let numbers = [1,5,3,5,1,2,6];
+    // let even = numbers.filter((item,index)=>{
+    //     return item%2==0;
+    // })
+    // document.write(even);
+    // let numbers = [1,5,3,5,1,2,6];
+    // let sqaure = numbers.map((item)=>{
+    //     return item**2;
+    // })
+    // document.write(JSON.stringify(sqaure));
+    let numbers = [1,5,3,7,1,2,6];
+    numbers.splice(1,2,100);
+    document.write(numbers);
+
+    </script>
+</body>
+</html>
