@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS/Dictionaries in Python</title>
+</head>
+<body>
+    <script>
+        let details = {name:"Saajan" ,age:"16",school:"Secondary", course:"Web Development"};
+        document.write(details['name']);
+        document.write("<br>");
+        details["gender"] = "Male";
+        document.write(JSON.stringify(details));
+        document.write("<br>");
+        delete details.age;
+        document.write(JSON.stringify(details));
+        document.write("<br>");
+        details['age']='27';
+        document.write(JSON.stringify(details));
+        
+
+    </script>
+</body>
+</html>

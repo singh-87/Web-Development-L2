@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="row">
+                <button type="button" class="btn">&#9734</button>
+                <button type="button" class="btn">&#9734</button>
+                <button type="button" class="btn">&#9734</button>
+                <button type="button" class="btn">&#9734</button>
+                <button type="button" class="btn">&#9734</button>
+            </div>
+            <p>0 out of 5</p>
+        </div>
+    </center>
+    <script>
+        let btn = document.querySelectorAll('.btn');
+        let paragraph = document.querySelector('p');
+        btn.forEach((item,index)=>{
+            item.addEventListener('click',rate);
+            function rate(){
+                let current_star = index+1;
+                paragraph.innerHTML=`${current_star} out of 5`;
+                btn.forEach((item,index)=>{
+                    if (index<current_star){
+                        item.innerHTML='&#9733';
+                    }
+                    else{
+                        item.innerHTML="&#9734";
+                    }
+                })
+            }
+
+        })
+
+    </script>
+</body>
+</html>
