@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <h2>To do list</h2>
+        <input type="text" style="font-size:20px;padding:10px;border-radius:5px;" class="inp_1">
+        <input type="date" style="font-size:20px;padding:10px;border-radius:5px;" class="inp_2">
+        <button style="font-size:25px;padding:10px;border-radius:5px;border: none;background-color: green;color:white;width:120px;" onclick="add_item()">ADD</button>
+    </div>
+    <br>
+    <div class="container2">
+
+    </div>
+
+    <script>
+        let to_dolist=[{task_name:"make dinner",task_date:"2022-12-22"},
+                       {task_name:"wash dishes",task_date:"2022-12-22"},
+                       {task_name:"wash car",task_date:"2022-12-22"}
+        ];
+        function render(){
+            let task_html=" ";
+            to_dolist.forEach((item)=>{
+            let html= 
+                `<tr class='div_1'>
+                ${item.task_name}
+            </tr>
+            <tr class='div_1'>
+                ${item.task_date}
+            </tr>
+            <button style="background-color: red;font-size:25px; padding:10px;color:white;border-radius:5px;border:none;" class="btn_1" >DELETE</button>`;
+            task_html+=html+`<br><br>`;
+            })
+            document.querySelector(".container2").innerHTML=task_html;
+            document.querySelectorAll(".btn_1").forEach((item,index)=>{
+                item.addEventListener("click",()=>{
+                    to_dolist.splice(index,1);
+                    render();
+                })
+            })
+
+        }
+        render()
+        function add_item(){
+            let task = document.querySelector(".inp_1").value;
+            let date = document.querySelector(".inp_2").value;
+            to_dolist.push({
+                task_name:task,
+                task_date:date,
+            })
+            document.querySelector(".inp_1").value=" ";
+            document.querySelector(".inp_2").value=" ";
+            render()
+
+        }
+    </script>
+
+</body>
+</html>
